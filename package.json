@@ -9,6 +9,8 @@
   "scripts": {
     "start": "node src/server.js",
     "test": "vitest run --dir tests",
+    "test:unit": "vitest run --dir tests/unit",
+    "test:e2e": "vitest run --dir tests/e2e",
     "test:ui": "vitest --ui",
     "test:coverage": "vitest --coverage",
     "build": "tsup src",
