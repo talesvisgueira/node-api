@@ -1,5 +1,5 @@
 import { User } from "../../../core/domain/user/User";
-import { IUserRepository } from "../IUserRepsitory";
+import type { IUserRepository } from "../IUserRepsitory";
 
 export class UserMemoryRepository implements IUserRepository {
     users: User[] = [];

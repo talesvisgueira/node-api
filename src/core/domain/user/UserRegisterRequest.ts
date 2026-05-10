@@ -1,5 +1,5 @@
 import { nanoid } from '../../../../node_modules/zod/src/v4/core/regexes';
-export class UserRegistrerRequest {
+export class UserRegisterRequest {
 
     name: string;
     email: string;
@@ -20,7 +20,7 @@ export class UserRegistrerRequest {
     }
 
     validateName(name: string) {
-        if (name.length < 3) {
+        if (name.length <= 3) {
             throw new Error('Name must be at least 3 characters long');
         }
     }
@@ -33,7 +33,7 @@ export class UserRegistrerRequest {
     }
 
     validatePassword(password: string) {
-        if (password.length < 8) {
+        if (password.length <= 8) {
             throw new Error('Password must be at least 8 characters long');
         }
     }
