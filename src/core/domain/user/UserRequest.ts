@@ -1,5 +1,5 @@
 import { nanoid } from '../../../../node_modules/zod/src/v4/core/regexes';
-export class UserRegisterRequest {
+export class UserRequest {
 
     name: string;
     email: string;
