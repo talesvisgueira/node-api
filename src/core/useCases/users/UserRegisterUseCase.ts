@@ -1,5 +1,6 @@
+import { User } from "../../domain/user/User";
 import type { IUserRepository } from '../../../infra/repositories/IUserRepsitory';
-import { UserRegisterRequest } from "../../domain/user/UserRegisterRequest";
+import { UserRequest } from "../../domain/user/UserRequest";
 
 
 export class UserRegisterUseCase {
@@ -10,8 +11,8 @@ export class UserRegisterUseCase {
         this.userRepository = userRepository;
     }
 
-    async execute(data: UserRegisterRequest) {
-        const user = await this.userRepository.create(data);
+    async execute(data: UserRequest): Promise<User> {
+        const user: User = await this.userRepository.create(data);
         return user;
     }
 
